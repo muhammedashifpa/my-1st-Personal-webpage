@@ -49,7 +49,7 @@ $('#Inputfullname').change(function(){
   }
 })
 
-/*========================================       number validation      =======================================*/
+/*========================================     number validation    =======================================*/
 $('#InputNumber').on('keypress' ,function(event){
   var x = event.which || event.keycode;
   let valueBox = $('#InputNumber').val();
@@ -104,8 +104,15 @@ $('#InputEmail').blur(function(){
   }
 })
 $('#InputEmail').keyup(function(){
-  if(secEmailTry){
   let valueBox = $('#InputEmail').val();
+  if(valueBox.length ===1){
+    let spaceRegex = /\s/;
+    if(spaceRegex.test(valueBox)){
+      this.value=''
+    }
+  }
+  if(secEmailTry){
+  
   let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if(emailRegex.test(valueBox)){
     console.log('@gmail.com');
@@ -213,6 +220,4 @@ document.addEventListener("DOMContentLoaded", function(){
     }); 
     // window.addEventListener
   }
-  // if
-
 }); 
