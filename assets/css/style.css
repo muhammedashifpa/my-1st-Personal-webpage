@@ -156,7 +156,7 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    margin-top: 7.5rem;
+    margin-top: 2.5rem;
     transition: .4s;
 }
 .scroll-btn:hover{
@@ -247,7 +247,7 @@
         padding-top: 3rem;
     }
     .home__blob{
-        width: 270px;
+        width: 170px;
     }
 }
  /*=============================    skills  section      ===================================*/
