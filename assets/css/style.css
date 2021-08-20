@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poiret+One&family=Varela+Round&display=swap');
+
+
+*,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.section{
+    padding: 2rem 0 4rem;
+}
+
+:root{
+    --header-height: 3rem;
+    /*============CHANGE COLORS=============*/
+    /*===CHANGE COLOR===*/
+    --hue-color: 250;/*purple 250 -  green 125 - Blue 230 - Pink 340*/
+
+    /* HSL color mode */
+    --first-color:hsl(var(--hue-color), 69%, 61%);
+    --first-color-second:hsl(var(--hue-color), 74%, 62%) ;
+    --first-color-alt:hsl(var(--hue-color), 57%, 53%) ;
+    --first-color-lighter:hsl(var(--hue-color), 92%, 85%) ;
+    --title-color:hsl(var(--hue-color), 8%, 15%) ;
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light:hsl(var(--hue-color), 8%, 65%) ;
+    --input-color:hsl(var(--hue-color), 70%, 96%) ;
+    --body-color:hsl(var(--hue-color), 60%, 99%) ;
+    --container-color:#fff ;
+
+    /*==========    FONT AND TYPEOFGRAPY     ==========*/   
+    --body-font: 'Poppins', sans-serif;
+
+    /*   .5rem = 8px, 1rem = 16px, 1.5rem = 24px......*/
+    --big-font-size: 2rem ;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*=====   FONT WEIGHT   =======*/
+    --font-medium:500 ;
+    --font-semi-bold:600 ;
+
+    /*========  MARGINS BOTTOMS    ======*/
+    /*    .25rem = 4px, .5rem = 8px, .75rem = 12px ....*/
+    --mb-0-25:.25rem ;
+    --mb-0-5:.5rem ;
+    --mb-0-75: .75rem;
+    --mb-1:1rem ;
+    --mb-1-5:1.5rem ;
+    --mb-2:2rem ;
+    --mb-2-5:2.5rem;
+    --mb-3:3rem ;
+
+    /*======   z index   ======*/
+    --z-tool-tip:10 ;
+    --z-fixed:100 ;
+    --z-model:1000 ; 
+}
+@media screen and (min-width:968px){
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size:1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+    
+}
+
+
+/*=========================   NAV BAR    ===========================*/
+
+#nav-heading{
+    color: var(--first-color);
+    font-family: var(--body-font);
+    font-weight: 600;
+}
+#nav-heading:hover{
+    color: var(--first-color-alt);
+}
+.nav-list-container{
+    width: 50%;
+    justify-content: space-between;
+    
+}
+#navbar-list{
+    justify-content: space-around;
+}
+ /*======================================================      main section ============================================================*/
+
+
+ /*=======================      home section ==========================*/
+ .home{
+ }
+
+
+.grid{
+    display: grid;
+}
+
+.home-content{
+    padding-top: 7.5rem;
+    align-items: center;
+    justify-content: center;
+}
+/*======   social    ======*/
+.social-list{
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+    justify-content: center;
+    row-gap: 1rem;
+    font-size: var(--h2-font-size);
+}
+.social-icon{
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+.social-icon:hover{
+    color: var(--first-color-alt);
+}
+/*======   profile pic    ======*/
+.home__blob{
+    width: 300px;
+}
+
+/*======   HOME DATA    ======*/
+.home-title{
+    font-size: var(--big-font-size);
+    font-weight: 700;
+}
+.home-subtitle{
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+}
+.home-discription{
+    font-size: var(--h4-font-size);
+    color: var(--text-color);
+    margin-bottom: var(--mb-2);
+}
+.home-scroll{
+    justify-content:center ;
+    align-items: center;
+}
+
+.scroll-btn{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 7.5rem;
+    transition: .4s;
+}
+.scroll-btn:hover{
+    transform: translateY(.25rem);
+    color: black;
+}
+.scroll-icon{
+    color: var(--first-color);
+    font-size: var(--h2-font-size);
+}
+/*==================    BUTTON    ==============*/
+.button{
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    text-decoration: none;
+    transition: .3s;
+}
+.button:hover{
+    background-color: var(--first-color-alt);
+    color: #fff;
+}
+.button__icon{
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+}
+ /*=============================      about  section      ===================================*/
+ .section-pt{
+    padding-top: 4rem;
+ }
+.about-container{
+}
+.about-title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+}
+.about-subtitle{
+    font-size: var(--normal-font-size);
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: var(--mb-2);
+}
+.img-div{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    margin-bottom: var(--mb-2-5);
+}
+.about-img{
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.about-discription{
+    text-align: justify;
+    color: var(--text-color);
+    text-indent:10%;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: var(--mb-2);
+}
+.progress-title{
+    text-align: center;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+    padding-top: 2rem;
+}
+.progress-subtitle{
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    text-align: center;
+}
+@media (max-width:992px){
+    .home-scroll{
+        display: none;
+    }
+    .home-content{
+        padding-top: 3rem;
+    }
+    .home__blob{
+        width: 270px;
+    }
+}
+ /*=============================    skills  section      ===================================*/
+.skills-title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+}
+.skills-subtitle{
+    font-size: var(--normal-font-size);
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: var(--mb-2);
+}
+.progressbar-title-div{
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.progressbar-title{
+    font-size: var(--h3-font-size);
+}
+.progrss-progress{
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+}
+/*=============================    project  section      ===================================*/
+.project-title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+}
+.project-subtitle{
+    font-size: var(--normal-font-size);
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: var(--mb-2);
+}
+.pro-icon{
+    font-size: var(--h2-font-size);
+}
+.pro-button{
+    padding-top: 0.25em;;
+    padding-bottom: 0.25em;
+
+}
+
+/*=============================    contactsection      ===================================*/
+.contact-title{
+    font-size: var(--h1-font-size);
+    text-align: center;
+}
+.contact-subtitle{
+    font-size: var(--normal-font-size);
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: var(--mb-2);
+}
+#gform{
+    max-width: 600px;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-mycontrol{
+    color: var(--text-color);
+}
+.submit-btn{
+    padding: 10px 30px;
+    border: 0;
+}
+
+/*==================================================    footer      ================================================*/
+.footer-div{
+    padding: 30px;
+}
+.footer-social-list{
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+    justify-content: space-evenly;
+    font-size: var(--h2-font-size);
+    display: flex;
+    max-width: 200px;
+    margin: auto ;
+}
+
+
