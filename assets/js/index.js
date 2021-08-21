@@ -9,9 +9,14 @@ var secEmailTry = false;
 var messageState = true;
 /*==================================       name validation      =======================================*/
 /*==============    restric unwanted elements ===============*/
-$('#Inputfullname').on('keypress' ,function(event){
+$('#Inputfullname').keypress(function(event){
     var x = event.which || event.keycode;
+    let lastSpaceRegex = /\s$/;
     let valueBox = $('#Inputfullname').val();
+    /*=====    restric double space ====*/
+    if(lastSpaceRegex.test(valueBox) && x===32){
+      return false;
+    }
     /*=====    restric first space ====*/
     if(valueBox.length == 0 && x === 32){
       return false
@@ -28,7 +33,6 @@ $('#Inputfullname').on('keypress' ,function(event){
       return false
     }
 })
-
 /*=============  length lesstan 5  ============*/
 $('#Inputfullname').blur(function(){
   let valueBox = $('#Inputfullname').val();
@@ -48,9 +52,8 @@ $('#Inputfullname').change(function(){
     $('#nameLabel').css("color", "var(--text-color)");
   }
 })
-
 /*========================================     number validation    =======================================*/
-$('#InputNumber').on('keypress' ,function(event){
+$('#InputNumber').keypress(function(event){
   var x = event.which || event.keycode;
   let valueBox = $('#InputNumber').val();
   if(secNumberTry&&valueBox.length==9){
@@ -90,8 +93,9 @@ $('#InputNumber').change(function(){
 })
 /*========================================       email validation      =======================================*/
 $('#InputEmail').blur(function(){
-  let valueBox = $('#InputEmail').val();
   let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  let valueBox = $('#InputEmail').val();
+  this.value = valueBox.trim();
   if(emailRegex.test(valueBox)){
     console.log('@gmail.com');
     emailState=true;
@@ -105,14 +109,8 @@ $('#InputEmail').blur(function(){
 })
 $('#InputEmail').keyup(function(){
   let valueBox = $('#InputEmail').val();
-  if(valueBox.length ===1){
-    let spaceRegex = /\s/;
-    if(spaceRegex.test(valueBox)){
-      this.value=''
-    }
-  }
+  this.value = valueBox.replace(/\s/g,'')
   if(secEmailTry){
-  
   let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if(emailRegex.test(valueBox)){
     console.log('@gmail.com');
@@ -183,6 +181,9 @@ $("#gform").submit((e)=>{
 }
 else{
   alert('please fill the form')
+  secNameTry = true;
+  secEmailTry = true;
+  secNumberTry = true;
 }
 })
 
