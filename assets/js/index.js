@@ -200,7 +200,6 @@ $("#navbarSupportedContent").on('show.bs.collapse', function() {
 document.addEventListener("DOMContentLoaded", function(){
 
   el_autohide = document.querySelector('.autohide');
-  
   // add padding-top to bady (if necessary)
   navbar_height = document.querySelector('.navbar').offsetHeight;
   document.body.style.paddingTop = navbar_height + 'px';
@@ -212,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function(){
          if(scroll_top < last_scroll_top) {
               el_autohide.classList.remove('scrolled-down');
               el_autohide.classList.add('scrolled-up');
+              console.log('true')
           }
           else {
               el_autohide.classList.remove('scrolled-up');
