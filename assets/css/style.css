@@ -4,7 +4,7 @@
 *,body{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 .section{
     padding: 2rem 0 4rem;
@@ -91,12 +91,6 @@
 #navbar-list{
     justify-content: space-around;
 }
-.scrolled-down{
-    transform:translateY(-100%); transition: all 0.3s ease-in-out;
-  }
-  .scrolled-up{
-    transform:translateY(0); transition: all 0.3s ease-in-out;
-  }
  /*======================================================      main section ============================================================*/
 
 
